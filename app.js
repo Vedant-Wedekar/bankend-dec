@@ -11,10 +11,19 @@ app.use((req, res , next ) => {
 },
 (req, res) => {
     res.render('index');
-});
+})
 app.get('/product', (req, res) => {
     res.send('this is a product');
-  });
+  })
+
+  
+
+app.post('/get-form-data',(req, res) => {
+console.log(req.query);
+res.send(' data received');
+})
+  
+
 
 app.listen(3000) 
 
